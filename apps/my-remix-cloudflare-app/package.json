@@ -1,0 +1,63 @@
+{
+  "name": "@repo/my-remix-cloudflare-app",
+  "private": true,
+  "description": "All-in-one remix starter template for Cloudflare Pages",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "remix vite:build",
+    "cleanup": "rimraf .cache ./build",
+    "dev": "remix vite:dev",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "prepare": "husky",
+    "start": "wrangler pages dev ./build/client",
+    "test": "playwright test --ui",
+    "typecheck": "wrangler types && tsc"
+  },
+  "lint-staged": {
+    "*.{js,mjs,ts,tsx,css,md,yml}": "prettier --write"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "^0.4.0",
+    "@remix-run/cloudflare": "^2.8.1",
+    "@remix-run/cloudflare-pages": "^2.8.1",
+    "@remix-run/react": "^2.8.1",
+    "@repo/configs": "workspace:^",
+    "@repo/db": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "isbot": "^3.6.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240222.0",
+    "@octokit/types": "^12.6.0",
+    "@playwright/test": "^1.42.1",
+    "@remix-run/dev": "^2.8.1",
+    "@remix-run/eslint-config": "^2.8.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "autoprefixer": "^10.4.18",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "msw": "^2.2.3",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.18.0",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
+    "vite-tsconfig-paths": "^4.3.1",
+    "wrangler": "^3.32.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,2 @@
+# Rename this file to `.dev.vars`
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"

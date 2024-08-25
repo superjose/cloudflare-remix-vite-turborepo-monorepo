@@ -1,0 +1,9 @@
+name = "remix-cloudflare-template"
+compatibility_date = "2024-02-11"
+kv_namespaces = [
+  { binding = "cache", id = "cache" }
+]
+
+[vars]
+GITHUB_OWNER = "edmundhung"
+GITHUB_REPO = "remix-cloudflare-template"
