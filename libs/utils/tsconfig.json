@@ -1,0 +1,5 @@
+{
+  "extends": "@repo/configs/tsconfig.base.lib.json",
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}

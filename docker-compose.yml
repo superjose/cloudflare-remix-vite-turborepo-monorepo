@@ -1,0 +1,27 @@
+# Auto-generated docker-compose.yml file.
+version: '3.8'
+# Define services.
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  pgadmin:
+  # To connect PG Admin use:
+  # host.docker.internal
+  # postgres
+  # (username) postgres
+  # (password) postgres
+    image: dpage/pgadmin4
+    ports:
+      - "8500:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@a.com
+      PGADMIN_DEFAULT_PASSWORD: admin

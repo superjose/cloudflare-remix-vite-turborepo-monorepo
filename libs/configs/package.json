@@ -1,0 +1,5 @@
+{
+  "name": "@repo/configs",
+  "type": "module",
+  "private": true
+}

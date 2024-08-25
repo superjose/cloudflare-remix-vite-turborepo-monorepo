@@ -12,10 +12,9 @@ export async function loader({ context }: LoaderFunctionArgs) {
 		mode: 'cloudflare',
 	});
 	if (client) {
-		await client.query.User.findFirst();
-		console.log('Client!!');
+		const res = await client.query.User.findFirst();
+		console.log('res', res);
 	}
-	console.log('ERROR: Could not get client');
 	const content = await getFileContentWithCache(context, 'README.md');
 
 	return json(

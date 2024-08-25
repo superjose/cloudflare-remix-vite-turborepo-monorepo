@@ -1,0 +1,5 @@
+{
+  "extends": "@repo/configs/tsconfig.base.lib.json",
+  "include": ["./src/**/*.ts", "./src/drizzle/"],
+  "exclude": ["node_modules"]
+}
