@@ -221,17 +221,16 @@ importers:
         specifier: ^3.32.0
         version: 3.72.2(@cloudflare/workers-types@4.20240821.1)
 
-  libs/configs:
-    dependencies:
-      '@repo/configs':
-        specifier: workspace:^
-        version: 'link:'
+  libs/configs: {}
 
   libs/db:
     dependencies:
       '@repo/configs':
         specifier: workspace:^
         version: link:../configs
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       drizzle-kit:
         specifier: ^0.24.1
         version: 0.24.1
