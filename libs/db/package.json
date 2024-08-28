@@ -1,12 +1,9 @@
 {
   "name": "@repo/db",
   "version": "1.0.0",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts",
   "scripts": {
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "dotenv tsx ./drizzle/migrate"
+    "db:migrate": "tsx ./src/drizzle/migrate.ts"
   },
   "exports": {
     ".": {
@@ -15,13 +12,10 @@
     }
   },
   "dependencies": {
-    "@repo/configs": "workspace:^",
-    "dotenv": "^16.4.5",
-    "drizzle-kit": "^0.24.1",
-    "drizzle-orm": "^0.33.0",
-    "postgres": "^3.4.4"
+    "@repo/configs": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^22.5.0"
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.24.1"
   }
 }

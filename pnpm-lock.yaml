@@ -20,9 +20,15 @@ importers:
       '@remix-run/react':
         specifier: ^2.8.1
         version: 2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
+      drizzle-orm:
+        specifier: ^0.33.0
+        version: 0.33.0(@cloudflare/workers-types@4.20240821.1)(@types/react@18.3.4)(postgres@3.4.4)(react@18.3.1)
       isbot:
         specifier: ^3.6.5
         version: 3.8.0
+      postgres:
+        specifier: ^3.4.4
+        version: 3.4.4
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -63,6 +69,9 @@ importers:
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -93,6 +102,9 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.10
+      tsx:
+        specifier: ^4.18.0
+        version: 4.18.0
       turbo:
         specifier: ^2.0.14
         version: 2.0.14
@@ -175,6 +187,9 @@ importers:
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -228,22 +243,13 @@ importers:
       '@repo/configs':
         specifier: workspace:^
         version: link:../configs
+    devDependencies:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
       drizzle-kit:
         specifier: ^0.24.1
         version: 0.24.1
-      drizzle-orm:
-        specifier: ^0.33.0
-        version: 0.33.0(@cloudflare/workers-types@4.20240821.1)(@types/react@18.3.4)(postgres@3.4.4)(react@18.3.1)
-      postgres:
-        specifier: ^3.4.4
-        version: 3.4.4
-    devDependencies:
-      '@types/node':
-        specifier: ^22.5.0
-        version: 22.5.0
 
   libs/utils:
     dependencies:

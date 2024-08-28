@@ -5,6 +5,27 @@ A Monorepo using Turborepo, Cloudflare Pages/Workers, Remix.run, Vite and pnpm w
 Follow me on X, and LinkedIn:
 [(@javiasilis)](https://twitter.com/javiasilis) [(@javiasilis)](https://www.linkedin.com/in/javiasilis)
 
+# How to Run this program
+
+```
+pnpm install
+docker-compose up -d
+
+
+```
+
+For Cloudflare Dev:
+
+```
+pnpm preview
+```
+
+For normal node dev:
+
+```
+pnpm dev
+```
+
 # Pre-requisites
 
 1. Nodejs

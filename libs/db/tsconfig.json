@@ -1,4 +1,9 @@
 {
   "extends": "@repo/configs/tsconfig.base.lib.json",
-  "include": ["./src/**/*.ts", "./src/drizzle/"]
+  "include": ["./src/**/*.ts", "./src/drizzle/"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "outDir": "dist"
+  }
 }

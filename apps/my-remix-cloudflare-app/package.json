@@ -7,10 +7,11 @@
   "scripts": {
     "build": "remix vite:build",
     "cleanup": "rimraf .cache ./build",
-    "dev": "remix vite:dev",
+    "dev": "NODE_OPTIONS=\"--import tsx/esm\" remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "prepare": "husky",
     "start": "wrangler pages dev ./build/client",
+    "preview": "NODE_OPTIONS=\"--import tsx/esm\" pnpm run build && wrangler pages dev ./build/client",
     "test": "playwright test --ui",
     "typecheck": "wrangler types && tsc"
   },
@@ -41,6 +42,7 @@
     "autoprefixer": "^10.4.18",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
